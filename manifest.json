@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Scribd Full Page to PDF Pro",
+  "version": "3.0",
+  "description": "Chụp toàn bộ trang Scribd, giao diện trực quan, tự động chờ thông minh và chống lỗi.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "downloads",
+    "debugger",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["jspdf.umd.min.js"],
+      "matches": ["*://*.scribd.com/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
